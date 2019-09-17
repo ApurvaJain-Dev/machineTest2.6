@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="108" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="machineTest2_6" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="107.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCS-sI-c92">
+                        <rect key="frame" x="16" y="11" width="201" height="31"/>
+                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="xCM-as-6l9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7mD-rL-0GU">
+                        <rect key="frame" x="251" y="38" width="49" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="c3m-DP-P5d"/>
+                            <constraint firstAttribute="width" constant="47" id="ymR-dz-56w"/>
+                        </constraints>
+                        <connections>
+                            <action selector="switchSelected:" destination="KGk-i7-Jjw" eventType="valueChanged" id="ys1-6K-XfC"/>
+                        </connections>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-Xn-Wmv">
+                        <rect key="frame" x="16" y="56" width="201" height="41"/>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7mD-rL-0GU" firstAttribute="leading" secondItem="7fw-Xn-Wmv" secondAttribute="trailing" constant="34" id="33y-nx-TT7"/>
+                    <constraint firstItem="7mD-rL-0GU" firstAttribute="leading" secondItem="dCS-sI-c92" secondAttribute="trailing" constant="34" id="K4J-9P-gsE"/>
+                    <constraint firstItem="dCS-sI-c92" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YV4-zI-CS6"/>
+                    <constraint firstItem="7fw-Xn-Wmv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dhJ-RR-Psm"/>
+                    <constraint firstItem="dCS-sI-c92" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="eQE-xt-CyS"/>
+                    <constraint firstItem="7fw-Xn-Wmv" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="iQc-IY-tks"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="7mD-rL-0GU" secondAttribute="trailing" constant="6" id="kzd-fy-i54"/>
+                    <constraint firstItem="7mD-rL-0GU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="27" id="sVg-Fv-KRf"/>
+                    <constraint firstItem="7fw-Xn-Wmv" firstAttribute="top" secondItem="dCS-sI-c92" secondAttribute="bottom" constant="14" id="y4J-UP-J5D"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productNameLabel" destination="7fw-Xn-Wmv" id="mPB-bE-pxu"/>
+                <outlet property="productNumberLabel" destination="dCS-sI-c92" id="n0s-wK-4tr"/>
+                <outlet property="switchSelected" destination="7mD-rL-0GU" id="NYK-vo-qqa"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="183.50824587706148"/>
+        </tableViewCell>
+    </objects>
+</document>
